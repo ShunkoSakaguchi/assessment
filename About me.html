@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="about me.css">
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+    <div class="header">
+      <nav class="navbar">
+        <h2 class="logo">Shunko</h2>
+        <ul class="menu">
+          <li><a href="About me.html">HOME</a></li>
+          <li><a href="About me1.html">ABOUT ME</a></li>
+          <li><a href="hobby.html">HOBBY</a></li>
+          <li><a href="#">SCHOOL</a></li>
+          <li><a href="#">TARGET</a></li>
+        </ul>
+    </nav>
+    <script>
+        const menu = document.querySelector(".menu");
+        const navbar = document.querySelector(".navbar");
+        window.addEventListener("scroll", () => {
+          if (window.pageYOffset >= menu.offsetTop) {
+            //stickyクラスをnavbarに付与する。
+            navbar.classList.add("sticky");
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        });
+      </script>
+        <!--section01-->
+    <section class="sec-01">
+      <div class="container">
+          <h2 class="main-title">Shunko Sakaguchi</h2>
+          <div class="content">
+              <div class="image">
+              <img src="img/IMG_0779 (3) 2.PNG" alt="">
+          </div>
+          <div class="text-box">
+              <h3>Picture</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut molestiae quod iusto ipsam quaerat deleniti laudantium dolorum minus nulla reprehenderit?</p>
+          </div>
+      </div>
+      <div class="media-icons">
+          <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/shunnnkkoo" class="icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!--section02-->
+  <section class="sec-02">
+      <div class="container">
+          <h3 class="section-title">Picture</h3>
+          <div class="content">
+              <div class="image">
+                  <img src="https://nnn.ed.jp/assets/img/high_school_feature/img_shighschool.jpg" alt="">
+              </div>
+              <div class="info">
+                  <h4 class="info-title">Picture</h4>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, totam perferendis odit expedita adipisci consequatur voluptates reprehenderit, doloremque fuga saepe nostrum. Consectetur totam placeat eum. </p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!--section03-->
+  <section class="sec-03">
+      <div class="container">
+          <h3 class="section-titile">Picture</h3>
+          <div class="content">
+              <div class="media-info">
+                  <li>
+                      <a href="#"><i class="fab facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/shunnnkkoo"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-youtube"></i> Youtube</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    </li>
+              </div>
+              <div class="image">
+                  <img src="img/名称未 1.jpg" alt="">
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+
+    ScrollReveal({
+      reset: true,
+      distance: "60px",
+      duration: 2000,
+      delay: 200 ,
+    });
+
+    ScrollReveal().reveal(".main-title, .section-title", {
+      delay: 200,
+      origin: "left",
+    });
+    ScrollReveal().reveal(".sec-01 .image, .info", {
+      delay: 600,
+      origin: "bottom",
+    });
+    ScrollReveal().reveal(".text-box", {
+      delay: 700,
+      origin: "left",
+    });
+    ScrollReveal().reveal(".media-icons i", {
+      delay: 500,
+      origin: "bottom",
+      interval: 200,
+    });
+    ScrollReveal().reveal(".sec-02 .image, .sec-03 .image", {
+      delay: 500,
+      origin: "top",
+    });
+    ScrollReveal().reveal(".media-info li", {
+      delay: 500,
+      origin: "left",
+      interval: 200,
+    });
+  </script>
+  </body>
+</html>
